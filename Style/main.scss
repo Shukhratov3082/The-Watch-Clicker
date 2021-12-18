@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "./utils/fonts";
+@import "./utils/variables";
+@import "./sections/section-1";
+@import "./Sections/section-2";
+body {
+    font-family: "Poppins Regular";
+    font-style: normal;
+}
