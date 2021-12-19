@@ -5,9 +5,7 @@
     background-image: url(../../assets/icons/section-3-setka.svg);
     padding: 70px 250px 70px 250px;
     background: #002D3A;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include daj(flex,space-between,center);    
     .text-center {
         
         h1 {

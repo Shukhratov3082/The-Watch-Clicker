@@ -5,9 +5,7 @@
     color: white;
     position: relative;
     header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include daj(flex,space-between,center);    
         margin-bottom: 110px;
         nav{
             display: flex;
@@ -22,6 +20,8 @@
                 color: white;
             }
             .btn{
+                font-family: "Poppins Medium";
+                font-size: 16px;
                 width: 137px;
                 height: 48px;
                 padding: 11px 28px;
@@ -32,19 +32,19 @@
     }
         .smart{
             font-family:"Poppins SemiBold";
-            font-size: 13px;
+            font-size: 14px;
             line-height: 140%;
             margin-bottom: 8px;
             color: $mainBlue;
         }
         h1{
             font-family:"Poppins Bold";
-            font-size: 50px;
+            font-size: 55px;
             line-height: 125%;
             margin-bottom: 20px;
         }
         p{
-            font-size: 13px;
+            font-size: 15px;
             line-height: 160%;
             margin-bottom: 30px;
             opacity: 0.7;

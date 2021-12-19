@@ -1,26 +1,20 @@
 .section-4 {
     width: 100%;
-    padding: 0 269px;
+    padding: 0 260px;
     margin: 85px 0 210px 0;
 
     .heart-rate{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include daj(flex,space-between,center);    
         margin-bottom: 100px;
     }
 
     .sleep-monitoring{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include daj(flex,space-between,center);    
         margin-bottom: 130px;
     }
 
     .breathing{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include daj(flex,space-between,center);    
     }
 
     .info{

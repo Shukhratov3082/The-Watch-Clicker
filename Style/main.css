@@ -65,6 +65,8 @@
 }
 
 .section1 header nav .btn {
+  font-family: "Poppins Medium";
+  font-size: 16px;
   width: 137px;
   height: 48px;
   padding: 11px 28px;
@@ -73,7 +75,7 @@
 
 .section1 .smart {
   font-family: "Poppins SemiBold";
-  font-size: 13px;
+  font-size: 14px;
   line-height: 140%;
   margin-bottom: 8px;
   color: #13AE92;
@@ -81,13 +83,13 @@
 
 .section1 h1 {
   font-family: "Poppins Bold";
-  font-size: 50px;
+  font-size: 55px;
   line-height: 125%;
   margin-bottom: 20px;
 }
 
 .section1 p {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 160%;
   margin-bottom: 30px;
   opacity: 0.7;
@@ -229,12 +231,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section-3 .text-center h1 {
@@ -273,7 +275,7 @@
 
 .section-4 {
   width: 100%;
-  padding: 0 269px;
+  padding: 0 260px;
   margin: 85px 0 210px 0;
 }
 
@@ -341,7 +343,6 @@
 
 .section-5 {
   width: 100%;
-  height: 100vh;
 }
 
 .section-5 .div-1 {
@@ -351,24 +352,23 @@
   display: flex;
   width: 100%;
   height: 60%;
+  position: relative;
 }
 
 .section-5 .div-1 .left {
-  margin: 110px 0 0 200px;
-  width: 50%;
-  height: 100%;
+  margin: 110px 0 110px 200px;
 }
 
 .section-5 .div-1 .left h1 {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 31px;
   line-height: 140%;
   color: #000000;
 }
 
 .section-5 .div-1 .left p {
   margin: 30px 0 50px 0;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 160%;
   color: #000000;
 }
@@ -377,81 +377,90 @@
   padding: 0 30px 0 0;
 }
 
-.section-5 .div-1 .right {
-  width: 50%;
-  height: 100%;
-  margin-top: -150px;
+.section-5 .div-1 .right-img {
+  position: absolute;
+  right: 180px;
+  bottom: 0;
 }
 
-.section-5 .div-2 {
+.section-5 footer {
   width: 100%;
   height: 40%;
   background: #012F3C;
-  padding: 50px 200px 0 200px;
+  padding: 50px 200px 50px 200px;
 }
 
-.section-5 .div-2 .contener {
+.section-5 footer .contener-1 {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  height: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.section-5 .div-2 .contener .contener-1 {
+.section-5 footer .contener-1 div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
 }
 
-.section-5 .div-2 .contener .contener-1 h2 {
+.section-5 footer .contener-1 div:first-child h2 {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 160%;
-  color: #FFFFFF;
+  color: #ffffff7d;
 }
 
-.section-5 .div-2 .contener .contener-2 img {
-  margin-left: 180px;
+.section-5 footer .contener-1 .fotcenterimg {
+  margin-left: 85px;
 }
 
-.section-5 .div-2 .contener .contener-2 b {
-  font-size: 22px;
+.section-5 footer .contener-1 div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 37px;
+}
+
+.section-5 footer .center-p {
+  font-size: 19px;
   line-height: 160%;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff7d;
+  margin: 30px 0 31px 0;
 }
 
-.section-5 .div-2 .contener .contener-2 b span {
-  margin-left: 80px;
-}
-
-.section-5 .div-2 .contener .contener-3 .img {
-  margin-left: 35px;
-}
-
-.section-5 .div-2 .foot {
+.section-5 .foot {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.section-5 .div-2 .foot h3 {
+.section-5 .foot h3 {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 160%;
-  color: #FFFFFF;
+  color: #ffffff7d;
 }
 
-.section-5 .div-2 .foot div {
-  width: 74%;
-  list-style-type: none;
-  border-bottom: 1px solid #555;
+.section-5 .foot hr {
+  width: 843px;
+  height: 0px;
+  opacity: 0.1;
+  border: 1px solid  #ffffff7d;
 }
 
 body {
