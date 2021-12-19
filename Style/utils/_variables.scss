@@ -2,6 +2,7 @@
 $mainBlue:#13AE92;
 $textcolor:#000000;
 //positions
+
 @mixin daj($dis,$jus,$alig) {
     display: $dis;
     justify-content: $jus;
