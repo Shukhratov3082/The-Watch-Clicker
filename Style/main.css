@@ -271,6 +271,77 @@
   color: #FFFFFF;
 }
 
+.section-4 {
+  width: 100%;
+  margin-top: 85px;
+  margin-bottom: 210px;
+}
+
+.section-4 .heart-rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 38px;
+  margin-bottom: 100px;
+}
+
+.section-4 .sleep-monitoring {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 130px;
+  gap: 74px;
+}
+
+.section-4 .breathing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 97px;
+}
+
+.section-4 .info h1 {
+  font-size: 31px;
+  line-height: 43.4px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.section-4 .info p {
+  font-size: 16px;
+  line-height: 160%;
+  opacity: 0.7;
+  margin-bottom: 35px;
+}
+
+.section-4 .info button {
+  font-size: 16px;
+  width: 137px;
+  height: 48px;
+  padding: 11px 25px;
+  background: #13AE92;
+  color: white;
+  border: 0;
+}
+
 body {
   font-family: "Poppins Regular";
   font-style: normal;
