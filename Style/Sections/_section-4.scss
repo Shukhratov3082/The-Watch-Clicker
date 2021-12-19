@@ -1,38 +1,26 @@
 .section-4 {
     width: 100%;
-
-
-    margin: {
-        top: 85px;
-        bottom: 210px;
-        
-    }
+    padding: 0 269px;
+    margin: 85px 0 210px 0;
 
     .heart-rate{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 38px;
         margin-bottom: 100px;
     }
 
     .sleep-monitoring{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 130px;
-        gap: 74px;
-
-
     }
 
     .breathing{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 97px;
-
-
     }
 
     .info{
