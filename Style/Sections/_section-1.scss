@@ -1,101 +1,163 @@
 .section1{
-    padding: 20px 210px 262px 210px;
+    padding: 1.5vw 15vw 18vw 15vw;
     position: relative;
     background: #002D3A;
     color: white;
     position: relative;
     header{
         @include daj(flex,space-between,center);    
-        margin-bottom: 110px;
+        margin-bottom: calc($index * 6);
         nav{
-            display: flex;
-            align-items: center;
+            @include daj(flex,space-between,center);  
             gap: 40px;
-
-            a {
+            a{
                 text-decoration: none;
-                font-family: "Poppins Medium";
-                font-size: 15px;
+                font-size: 1vw;
                 line-height: 160%;
                 color: white;
             }
-            .btn{
-                font-family: "Poppins Medium";
-                font-size: 16px;
-                width: 137px;
-                height: 48px;
-                padding: 11px 28px;
-                background: $mainBlue;
-
-            }
         }
     }
-        .smart{
-            font-family:"Poppins SemiBold";
-            font-size: 14px;
-            line-height: 140%;
-            margin-bottom: 8px;
-            color: $mainBlue;
-        }
-        h1{
-            font-family:"Poppins Bold";
-            font-size: 55px;
-            line-height: 125%;
-            margin-bottom: 20px;
-        }
-        p{
-            font-size: 15px;
-            line-height: 160%;
-            margin-bottom: 30px;
-            opacity: 0.7;
-        }
-       button{
-        font-family: "Poppins Medium";
-        font-size: 16px;
-        width: 137px;
-        z-index: 2;
-        position: absolute;
-        height: 48px;
-        padding: 11px 28px;
-        background: $mainBlue;
-        color: white;
-        border: 0;
-       }
-       .soat-1{
-            width: 260px;
-            height: 435px;
-           position: absolute;
-           z-index: 2;
-           top: 160px;
-           right: 325px;
+    .smart{
+        font-weight: 600;
+        font-size: 1vw;
+        line-height: 140%;
+        margin-bottom: 8px;
+        color: $mainBlue;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 4vw;
+        line-height: 125%;
+        margin-bottom: 20px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 160%;
+        margin-bottom: 30px;
+        opacity: 0.7;
+    }
+    .soat-1{
+         width: calc($index * 11);
+         height: calc($index * 18);
+         position: absolute;
+         z-index: 2;
+         top: calc($index * 6);
+         right: calc($index * 9);
 
-       }
-       .liniya-img1{
-        width: 730px;
-        height: 185px;
+    }
+    .liniya-img1{
+         width: calc($index * 28);
+         height: calc($index * 8);
+         position: absolute;
+         top: calc($index * 11);
+         right: calc($index * 1.5);
+         z-index: 1;
+    }
+    .liniya-img2{
+         position: absolute;
+         width: 100%;
+         background-size: cover;
+         bottom: -5px;
+         left: 0;
+    }
+    .block-img{
         position: absolute;
-        top: 310px;
-        right: 80px;
-        z-index: 1;
-      
-       }
-       .liniya-img2{
+        right: calc($index * 24);
+        bottom: 120px;
+        z-index: 2;
+    }
+    .dumaloq-img{
         position: absolute;
-        height: 310px;
-        width: 1515px;
-        bottom: -5px;
-        left: 0;
+        right: calc($index * 1);
+        bottom: 38px;
+    }
+    @media (max-width:1440px) {
+        .soat-1{
+            width: calc($index * 9);
+            height: calc($index * 15);
+        }
+        .liniya-img1{
+            width: calc($index * 22);
+            height: calc($index * 6);
        }
        .block-img{
-           position: absolute;
-            right: 707px;
-            bottom: 120px;
-            z-index: 2;
+            width: calc($index * 3.5);
+            right: calc($index * 18);
+        }
+        .dumaloq-img{
+            width: calc($index * 3.5);
+        }
+    }
+    @media (max-width:1024px) {
+        
+        header{
+            margin-bottom: 8vw;
+            img{
+                width: calc($index * 2);
+            }
+        }
+        .soat-1{
+            width: calc($index * 7);
+            height: calc($index * 11);
+        }
+        .liniya-img1{
+            width: calc($index * 19);
+            height: calc($index * 6);
+            right: calc($index * 1.5);
        }
-       .dumaloq-img{
-            position: absolute;
-            right: 32px;
-            bottom: 38px;
-       }
-    
+    }
+  @media (max-width:650px) {
+    padding: 1.5vw 12vw 18vw 12vw;
+    header{
+        margin-bottom: calc($index * 4);
+    }
+    .block-img{
+        bottom: 50px;
+
+    }
+    .liniya-img1{
+        width: calc($index * 21);
+        height: calc($index * 4);
+        top: calc($index * 10);
+   }
+  }
+  @media (max-width:560px) {
+    .soat-1{
+        width: calc($index * 5.5);
+        height: calc($index * 9);
+    }
+    .liniya-img1{
+        width: calc($index * 18);
+        height: calc($index * 4);
+        top: calc($index * 9);
+   }
+  }
+  @media (max-width:460px) {
+    .soat-1{
+        width: calc($index * 5.5);
+        height: calc($index * 8.5);
+        right: calc($index * 6);
+
+    }
+    p{
+        margin-bottom: 5px;
+    }
+    .block-img{
+        width: calc($index * 3);
+        bottom: 30px;
+        right: calc($index * 14);
+
+    }
+    .dumaloq-img{
+        width: calc($index * 3);
+    }
+    .liniya-img1{
+        width: calc($index * 19);
+        height: calc($index * 3);
+        right: calc($index * .6);
+        top: calc($index * 9);
+   }
+  }
 }

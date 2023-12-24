@@ -1,10 +1,22 @@
 //colors
 $mainBlue:#13AE92;
 $textcolor:#000000;
+$index: calc(1vw + 1vh);
 //positions
 
 @mixin daj($dis,$jus,$alig) {
     display: $dis;
     justify-content: $jus;
     align-items: $alig;
+}
+
+.btn{
+    font-family: "Poppins Medium";
+    padding: calc($index * 0.5) calc($index * 1.2);
+    font-weight: 500;
+    font-size: 1vw;
+    color: #fff;
+    background: $mainBlue;
+    border: none;
+    z-index: 100;
 }

@@ -1,10 +1,10 @@
 .section2{
     position: relative;
-    padding:329px 250px 329px 937px;
+    padding:calc($index * 10) 0 calc($index * 12) calc($index * 38);
     div{
-        width: 258px;
-        height: 298px;
-        padding: 115px 30px 36px 30px;
+        width: calc($index * 10);
+        position: relative;
+        padding: calc($index * 4) calc($index * 1) calc($index * 1) calc($index * 1);
         img{
             position: absolute;
             top: 33px;
@@ -12,53 +12,151 @@
         }
         h3{
             font-family: "Poppins Medium";
-            font-size: 22px;
+            font-weight: 500;
+            font-size: 1.3vw;
             line-height: 150%;
             color: $textcolor;
         }
         p{
-            font-size: 12px;
-            line-height: 160%;
+            font-weight: 400;
+            font-size: .75vw;
+            line-height: 150%;
             color: $textcolor;
             opacity: 0.7;
             margin: 15px 0 13px 0;
         }
+        span{
+            display: block;
+            font-size: 1vw;
+        }
     }
     div:first-child{
         position: absolute;
-        top: 130px;
-        left: 520px;
+        top: calc($index * 4);
+        left: calc($index * 19);
     }
     div:nth-child(2){
         position: absolute;
-        top: 255px;
-        left: 229px;
+        top: calc($index * 8);
+        left: calc($index * 7);
     }
     div:nth-child(3){
         position: absolute;
-        top: 460px;
-        left: 520px;
+        top: calc($index * 15);
+        left: calc($index * 19);
     }
     h2{
         font-family:"Poppins SemiBold";
-        font-size: 28px;
+        font-weight: 600;
+        font-size: 1.9vw;
         line-height: 140%;
         color: $textcolor;
         margin-bottom: 15PX;
     }
     p{
-        font-size: 15px;
+        font-size: 1vw;
+        font-weight: 400;
         line-height: 160%;
-        margin-bottom: 30PX;
+        margin-bottom: 30px;
     }
-    button{
-        font-family: "Poppins Medium";
-        font-size: 16px;
-        width: 137px;
-        height: 48px;
-        padding: 11px 25px;
-        background: $mainBlue;
-        color: white;
-        border: 0;
-       }
+    @media (max-width:1248px) {
+        padding-left:calc($index * 30);
+        div{
+            img{
+                width: calc($index * 2);
+            }
+            &:first-child{
+                left: calc($index * 16);
+            }
+            &:nth-child(2){
+                left: calc($index * 6);
+            }
+            &:nth-child(3){
+                left: calc($index * 16);
+            }
+        }
+    }
+    @media (max-width:950px) {
+        padding-left: calc($index * 27);
+    }
+    @media (max-width:800px) {
+        padding-left: calc($index * 25);
+        div:first-child{
+            left: calc($index * 14);
+        }
+        div:nth-child(2){
+            left: calc($index * 4);
+        }
+        div:nth-child(3){
+            left: calc($index * 14);
+        }
+        p{
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width:692px) {
+        padding-left: calc($index * 21);
+        div{
+            padding-top: calc($index * 3) 
+            img{
+                width: calc($index * 1.2);
+                top: 13px;
+                left: 20px;
+            }
+            &:first-child{
+                left: calc($index * 12);
+            }
+            &:nth-child(2){
+                left: calc($index * 3);
+            }
+            &:nth-child(3){
+                left: calc($index * 12);
+            }
+            p{
+                margin: 7px 0;
+            }
+        }
+        p{
+            margin-bottom: 10px;
+        }
+    }
+    @media (max-width:560px) {
+        padding:calc($index * 7) 0 calc($index * 8) calc($index * 19);
+        div{
+            padding-top: calc($index * 3.6);
+            img{
+                width: calc($index * 1);
+                left: 18px;
+            }
+            p{
+                margin-top: 2px;
+            }
+            &:first-child{
+                top: calc($index * 2.8);
+                left: calc($index * 10);
+            }
+            &:nth-child(2){
+                top: calc($index * 6);
+                left: calc($index * 3);
+            }
+            &:nth-child(3){
+                top: calc($index * 10);
+                left: calc($index * 10);
+            }
+        }
+    }
+    @media (max-width:450px) {
+        padding-left: calc($index * 16);
+        div{
+            &:first-child{
+                left: calc($index * 8);
+            }
+            &:nth-child(2){
+                left: calc($index * 2);
+            }
+            &:nth-child(3){
+                left: calc($index * 8);
+            }
+        }
+    }
 }

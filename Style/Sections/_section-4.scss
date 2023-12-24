@@ -1,7 +1,6 @@
 .section-4 {
     width: 100%;
-    padding: 0 260px;
-    margin: 85px 0 210px 0;
+    padding: calc($index * 4)  calc($index * 12) calc($index * 8);
 
     .heart-rate{
         @include daj(flex,space-between,center);    
@@ -13,33 +12,113 @@
         margin-bottom: 130px;
     }
 
-    .breathing{
+    .breath{
         @include daj(flex,space-between,center);    
+        gap: 30px;
     }
 
     .info{
         h1 {
-            font-size: 31px;
+            font-size: 2vw;
             line-height: 43.4px;
             color: $textcolor;
             margin-bottom: 20px;
         }
 
         p{
-            font-size: 16px;
+            font-size: 1vw;
             line-height: 160%;
             opacity: 0.7;
             margin-bottom: 35px;
         }
-
-        button{
-            font-size: 16px;
-            width: 137px;
-            height: 48px;
-            padding: 11px 25px;
-            background: $mainBlue;
-            color: white;
-            border: 0;
+    }
+    img{
+        width: calc($index * 21);
+        &.breathing{
+            width: calc($index * 17);
         }
     }
+    @media (max-width:1440px) {
+        img{
+            width: calc($index * 16);
+            &.breathing{
+                width: calc($index * 14);
+            }
+        }
+    }
+    @media (max-width:1240px) {
+        padding: calc($index * 4)  calc($index * 11) calc($index * 8);
+        img{
+            width: calc($index * 14);
+            &.breathing{
+                width: calc($index * 12);
+            }
+        }
+        .info{
+            h1 {
+                margin-bottom: 10px;
+            } 
+            p{
+                font-style: .9vw;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media (max-width:992px) {
+        padding: calc($index * 4)  calc($index * 10) calc($index * 8);
+        img{
+            width: calc($index * 12);
+            &.breathing{
+                width: calc($index * 10);
+            }
+        }
+        .info p{
+            margin-bottom: 15px;
+        }
+    }
+    @media (max-width:800px) {
+        padding: calc($index * 4)  calc($index * 8) calc($index * 5);
+        img{
+            width: calc($index * 11);
+            &.breathing{
+                width: calc($index * 9);
+            }
+        }
+        .info{
+            h1 {
+                margin-bottom: 0;
+            }  
+            p{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    @media (max-width:600px) {
+        padding: calc($index * 4)  calc($index * 7) calc($index * 5);
+        img{
+            width: calc($index * 9);
+            &.breathing{
+                width: calc($index * 7);
+            }
+        }
+    }
+    @media (max-width:480px) {
+        padding: calc($index * 4)  calc($index * 6) calc($index * 8);
+        img{
+            width: calc($index * 7.5);
+            &.breathing{
+                width: calc($index * 6);
+            }
+        }
+    }
+    @media (max-width:390px) {
+        padding: calc($index * 4)  calc($index * 5) calc($index * 6);
+        img{
+            width: calc($index * 7.5);
+            &.breathing{
+                width: calc($index * 6);
+            }
+        }
+    }
+
 }
