@@ -3,20 +3,41 @@
     position: relative;
     background: #002D3A;
     color: white;
-    position: relative;
     header{
         @include daj(flex,space-between,center);    
         margin-bottom: calc($index * 6);
+        transition: .3s ease;
+        .burger{
+            width: 20px;
+            height: 20px;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            z-index: 100;
+            .burger__line{
+                width: 100%;
+                background-color: white;
+                border-radius: 15px;
+                border: 1px solid white;
+            }
+        }
+        img{
+            width: calc($index * 3)
+        }
         nav{
             @include daj(flex,space-between,center);  
-            gap: 40px;
+            gap: calc($index * 2.5);
             a{
                 text-decoration: none;
-                font-size: 1vw;
+                font-size: 1.2vw;
                 line-height: 160%;
                 color: white;
             }
         }
+
     }
     .smart{
         font-weight: 600;
@@ -39,20 +60,19 @@
         opacity: 0.7;
     }
     .soat-1{
-         width: calc($index * 11);
-         height: calc($index * 18);
+         width: calc($index * 10);
+         height: calc($index * 17);
          position: absolute;
          z-index: 2;
-         top: calc($index * 6);
-         right: calc($index * 9);
+         top: 20%;
+         right: 17%;
 
     }
     .liniya-img1{
-         width: calc($index * 28);
-         height: calc($index * 8);
          position: absolute;
-         top: calc($index * 11);
-         right: calc($index * 1.5);
+         width: calc($index * 28);
+         top: 40%;
+         right: 5%;
          z-index: 1;
     }
     .liniya-img2{
@@ -63,101 +83,90 @@
          left: 0;
     }
     .block-img{
+        width: calc($index * 5);
         position: absolute;
-        right: calc($index * 24);
-        bottom: 120px;
+        right: 50%;
+        bottom: calc($index * 5);
         z-index: 2;
     }
     .dumaloq-img{
+        width: calc($index * 5);
         position: absolute;
-        right: calc($index * 1);
-        bottom: 38px;
+        right: 3%;
+        bottom: 5vh;
     }
-    @media (max-width:1440px) {
+
+    @media (max-width:1024px) {
         .soat-1{
-            width: calc($index * 9);
+            width: calc($index * 10);
             height: calc($index * 15);
         }
         .liniya-img1{
             width: calc($index * 22);
-            height: calc($index * 6);
        }
-       .block-img{
-            width: calc($index * 3.5);
-            right: calc($index * 18);
-        }
-        .dumaloq-img{
-            width: calc($index * 3.5);
-        }
     }
-    @media (max-width:1024px) {
-        
+    @media (max-width:600px) {
+        padding: 2.5vw 0 15vw 15vw;
         header{
-            margin-bottom: 8vw;
-            img{
-                width: calc($index * 2);
+            .burger{
+                display: flex;
+            }
+            nav{
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                right: -100%;
+                transition: right 0.3s ease-in-out;
+                padding: 50px 3vw 0;
+                background-color: blue;
+                flex-direction: column;
+                justify-content: start;
+                gap: 25px;
+                z-index: 99;
+                &.show{
+                    right: 0;
+                }
             }
         }
         .soat-1{
-            width: calc($index * 7);
-            height: calc($index * 11);
+            width: calc($index * 12);
+            height: calc($index * 17);
         }
         .liniya-img1{
-            width: calc($index * 19);
-            height: calc($index * 6);
-            right: calc($index * 1.5);
-       }
-    }
-  @media (max-width:650px) {
-    padding: 1.5vw 12vw 18vw 12vw;
-    header{
-        margin-bottom: calc($index * 4);
-    }
-    .block-img{
-        bottom: 50px;
+            width: calc($index * 24);
+        }
 
     }
-    .liniya-img1{
-        width: calc($index * 21);
-        height: calc($index * 4);
-        top: calc($index * 10);
-   }
-  }
-  @media (max-width:560px) {
-    .soat-1{
-        width: calc($index * 5.5);
-        height: calc($index * 9);
-    }
-    .liniya-img1{
-        width: calc($index * 18);
-        height: calc($index * 4);
-        top: calc($index * 9);
-   }
-  }
-  @media (max-width:460px) {
-    .soat-1{
-        width: calc($index * 5.5);
-        height: calc($index * 8.5);
-        right: calc($index * 6);
+//   @media (max-width:560px) {
+//     .soat-1{
+//         width: calc($index * 8);
+//         height: calc($index * 13);
+//         right: calc($index * 8);
+//     }
+//     .liniya-img1{
+//         width: calc($index * 18);
+//         height: calc($index * 4);
+//         top: calc($index * 9);
+//    }
+//   }
+//   @media (max-width:460px) {
+//     p{
+//         margin-bottom: 5px;
+//     }
+//     // .block-img{
+//     //     width: calc($index * 3);
+//     //     bottom: 30px;
+//     //     right: calc($index * 14);
 
-    }
-    p{
-        margin-bottom: 5px;
-    }
-    .block-img{
-        width: calc($index * 3);
-        bottom: 30px;
-        right: calc($index * 14);
-
-    }
-    .dumaloq-img{
-        width: calc($index * 3);
-    }
-    .liniya-img1{
-        width: calc($index * 19);
-        height: calc($index * 3);
-        right: calc($index * .6);
-        top: calc($index * 9);
-   }
-  }
+//     // }
+//     // .dumaloq-img{
+//     //     width: calc($index * 3);
+//     // }
+//     .liniya-img1{
+//         width: calc($index * 19);
+//         height: calc($index * 3);
+//         right: calc($index * .6);
+//         top: calc($index * 9);
+//    }
+//   }
 }

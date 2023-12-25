@@ -36,23 +36,43 @@
   position: relative;
   background: #002D3A;
   color: white;
-  position: relative;
 }
 .section1 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: calc((1vw + 1vh) * 6);
+  transition: 0.3s ease;
+}
+.section1 header .burger {
+  width: 20px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  z-index: 100;
+}
+.section1 header .burger .burger__line {
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid white;
+}
+.section1 header img {
+  width: calc((1vw + 1vh) * 3);
 }
 .section1 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: calc((1vw + 1vh) * 2.5);
 }
 .section1 header nav a {
   text-decoration: none;
-  font-size: 1vw;
+  font-size: 1.2vw;
   line-height: 160%;
   color: white;
 }
@@ -77,19 +97,18 @@
   opacity: 0.7;
 }
 .section1 .soat-1 {
-  width: calc((1vw + 1vh) * 11);
-  height: calc((1vw + 1vh) * 18);
+  width: calc((1vw + 1vh) * 10);
+  height: calc((1vw + 1vh) * 17);
   position: absolute;
   z-index: 2;
-  top: calc((1vw + 1vh) * 6);
-  right: calc((1vw + 1vh) * 9);
+  top: 20%;
+  right: 17%;
 }
 .section1 .liniya-img1 {
-  width: calc((1vw + 1vh) * 28);
-  height: calc((1vw + 1vh) * 8);
   position: absolute;
-  top: calc((1vw + 1vh) * 11);
-  right: calc((1vw + 1vh) * 1.5);
+  width: calc((1vw + 1vh) * 28);
+  top: 40%;
+  right: 5%;
   z-index: 1;
 }
 .section1 .liniya-img2 {
@@ -100,99 +119,56 @@
   left: 0;
 }
 .section1 .block-img {
+  width: calc((1vw + 1vh) * 5);
   position: absolute;
-  right: calc((1vw + 1vh) * 24);
-  bottom: 120px;
+  right: 50%;
+  bottom: calc((1vw + 1vh) * 5);
   z-index: 2;
 }
 .section1 .dumaloq-img {
+  width: calc((1vw + 1vh) * 5);
   position: absolute;
-  right: calc((1vw + 1vh) * 1);
-  bottom: 38px;
+  right: 3%;
+  bottom: 5vh;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .section1 .soat-1 {
-    width: calc((1vw + 1vh) * 9);
+    width: calc((1vw + 1vh) * 10);
     height: calc((1vw + 1vh) * 15);
   }
   .section1 .liniya-img1 {
     width: calc((1vw + 1vh) * 22);
-    height: calc((1vw + 1vh) * 6);
-  }
-  .section1 .block-img {
-    width: calc((1vw + 1vh) * 3.5);
-    right: calc((1vw + 1vh) * 18);
-  }
-  .section1 .dumaloq-img {
-    width: calc((1vw + 1vh) * 3.5);
   }
 }
-@media (max-width: 1024px) {
-  .section1 header {
-    margin-bottom: 8vw;
-  }
-  .section1 header img {
-    width: calc((1vw + 1vh) * 2);
-  }
-  .section1 .soat-1 {
-    width: calc((1vw + 1vh) * 7);
-    height: calc((1vw + 1vh) * 11);
-  }
-  .section1 .liniya-img1 {
-    width: calc((1vw + 1vh) * 19);
-    height: calc((1vw + 1vh) * 6);
-    right: calc((1vw + 1vh) * 1.5);
-  }
-}
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .section1 {
-    padding: 1.5vw 12vw 18vw 12vw;
+    padding: 2.5vw 0 15vw 15vw;
   }
-  .section1 header {
-    margin-bottom: calc((1vw + 1vh) * 4);
+  .section1 header .burger {
+    display: flex;
   }
-  .section1 .block-img {
-    bottom: 50px;
+  .section1 header nav {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: right 0.3s ease-in-out;
+    padding: 50px 3vw 0;
+    background-color: blue;
+    flex-direction: column;
+    justify-content: start;
+    gap: 25px;
+    z-index: 99;
   }
-  .section1 .liniya-img1 {
-    width: calc((1vw + 1vh) * 21);
-    height: calc((1vw + 1vh) * 4);
-    top: calc((1vw + 1vh) * 10);
+  .section1 header nav.show {
+    right: 0;
   }
-}
-@media (max-width: 560px) {
   .section1 .soat-1 {
-    width: calc((1vw + 1vh) * 5.5);
-    height: calc((1vw + 1vh) * 9);
+    width: calc((1vw + 1vh) * 12);
+    height: calc((1vw + 1vh) * 17);
   }
   .section1 .liniya-img1 {
-    width: calc((1vw + 1vh) * 18);
-    height: calc((1vw + 1vh) * 4);
-    top: calc((1vw + 1vh) * 9);
-  }
-}
-@media (max-width: 460px) {
-  .section1 .soat-1 {
-    width: calc((1vw + 1vh) * 5.5);
-    height: calc((1vw + 1vh) * 8.5);
-    right: calc((1vw + 1vh) * 6);
-  }
-  .section1 p {
-    margin-bottom: 5px;
-  }
-  .section1 .block-img {
-    width: calc((1vw + 1vh) * 3);
-    bottom: 30px;
-    right: calc((1vw + 1vh) * 14);
-  }
-  .section1 .dumaloq-img {
-    width: calc((1vw + 1vh) * 3);
-  }
-  .section1 .liniya-img1 {
-    width: calc((1vw + 1vh) * 19);
-    height: calc((1vw + 1vh) * 3);
-    right: calc((1vw + 1vh) * 0.6);
-    top: calc((1vw + 1vh) * 9);
+    width: calc((1vw + 1vh) * 24);
   }
 }
 
